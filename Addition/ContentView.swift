@@ -19,11 +19,14 @@ struct ContentView: View {
             VStack{
                 Form{
                 Section{
-                TextField(/*@START_MENU_TOKEN@*/"Number 1"/*@END_MENU_TOKEN@*/, text: $number1)
-                TextField("Number 2", text: $number2)
+                    TextField(/*@START_MENU_TOKEN@*/"Number 1"/*@END_MENU_TOKEN@*/, text: $number1)
+                        .keyboardType(/*@START_MENU_TOKEN@*/.numberPad/*@END_MENU_TOKEN@*/)
+                    TextField("Number 2", text: $number2)
+                        .keyboardType(/*@START_MENU_TOKEN@*/.numberPad/*@END_MENU_TOKEN@*/)
                  }
                     Section{
                         TextField("Result", text: $result)
+                            .disabled(/*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
                     }
 
                     Section{
